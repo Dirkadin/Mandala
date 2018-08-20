@@ -20,7 +20,7 @@ class MoodSelectionViewController: UIViewController {
 				moodButton.setImage(mood.image, for: .normal)
 				moodButton.imageView?.contentMode = .scaleAspectFit
 				moodButton.adjustsImageWhenHighlighted = false
-				moodButton.addTarget(self, action: #selector(moodButtonTapped(_:)), for: .touchUpInside)
+				moodButton.addTarget(self, action: #selector(moodSelectionChanged(_:)), for: .touchUpInside)
 				return moodButton
 			}
 			
