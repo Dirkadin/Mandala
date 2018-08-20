@@ -1,24 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PzK-z7-xPY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Mood Selection View Controller-->
+        <scene sceneID="KXl-VD-rex">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="PzK-z7-xPY" customClass="MoodSelectionViewController" customModule="Mandala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ovU-yf-STS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9V-Ex-BjP">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="V2s-Cb-tmy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="GHp-xK-lB4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GHp-xK-lB4" firstAttribute="top" secondItem="V2s-Cb-tmy" secondAttribute="top" id="0Mj-fA-lR5"/>
+                                        <constraint firstAttribute="bottom" secondItem="GHp-xK-lB4" secondAttribute="bottom" id="9fc-dc-qXK"/>
+                                        <constraint firstAttribute="trailing" secondItem="GHp-xK-lB4" secondAttribute="trailing" id="Rbs-wN-DrL"/>
+                                        <constraint firstItem="GHp-xK-lB4" firstAttribute="leading" secondItem="V2s-Cb-tmy" secondAttribute="leading" id="sn6-cz-jvw"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="YDe-b3-rlo"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHQ-D1-m74">
+                                <rect key="frame" x="75" y="537" width="225" height="30"/>
+                                <state key="normal" title="Add Mood">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LRR-ay-dvg" firstAttribute="trailing" secondItem="qHQ-D1-m74" secondAttribute="trailing" constant="75" id="5pS-3m-00e"/>
+                            <constraint firstItem="L9V-Ex-BjP" firstAttribute="top" secondItem="qHQ-D1-m74" secondAttribute="bottom" constant="20" id="IBc-0A-RQH"/>
+                            <constraint firstItem="L9V-Ex-BjP" firstAttribute="leading" secondItem="LRR-ay-dvg" secondAttribute="leading" id="KSe-2D-EzR"/>
+                            <constraint firstItem="qHQ-D1-m74" firstAttribute="centerX" secondItem="ovU-yf-STS" secondAttribute="centerX" id="Mgk-sP-Sxr"/>
+                            <constraint firstItem="LRR-ay-dvg" firstAttribute="trailing" secondItem="L9V-Ex-BjP" secondAttribute="trailing" id="VUC-qZ-6ig"/>
+                            <constraint firstItem="LRR-ay-dvg" firstAttribute="bottom" secondItem="L9V-Ex-BjP" secondAttribute="bottom" id="qWe-NX-Yjd"/>
+                            <constraint firstItem="qHQ-D1-m74" firstAttribute="leading" secondItem="LRR-ay-dvg" secondAttribute="leading" constant="75" id="xYC-2e-uBW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LRR-ay-dvg"/>
                     </view>
+                    <connections>
+                        <outlet property="addMoodButton" destination="qHQ-D1-m74" id="r7H-2g-Wu4"/>
+                        <outlet property="stackView" destination="GHp-xK-lB4" id="RmU-Xu-jx0"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M42-fe-uO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="73" y="149"/>
         </scene>
     </scenes>
 </document>
