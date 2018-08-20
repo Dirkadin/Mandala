@@ -17,6 +17,7 @@
 		4329E5D2212B396A00DF29AC /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329E5D1212B396A00DF29AC /* MoodEntry.swift */; };
 		4329E5D4212B3B3800DF29AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4329E5D3212B3B3800DF29AC /* Assets.xcassets */; };
 		4329E5D6212B3C7A00DF29AC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329E5D5212B3C7A00DF29AC /* UIColor+Extension.swift */; };
+		4329E5D8212B3E1100DF29AC /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329E5D7212B3E1100DF29AC /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4329E5D1212B396A00DF29AC /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
 		4329E5D3212B3B3800DF29AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4329E5D5212B3C7A00DF29AC /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		4329E5D7212B3E1100DF29AC /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				4329E5AA212B36A600DF29AC /* LaunchScreen.storyboard */,
 				4329E5AD212B36A600DF29AC /* Info.plist */,
 				4329E5D5212B3C7A00DF29AC /* UIColor+Extension.swift */,
+				4329E5D7212B3E1100DF29AC /* UIImage+Extension.swift */,
 			);
 			path = Mandala;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				4329E5A4212B36A400DF29AC /* ViewController.swift in Sources */,
 				4329E5D0212B36E600DF29AC /* Mood.swift in Sources */,
 				4329E5A2212B36A400DF29AC /* AppDelegate.swift in Sources */,
+				4329E5D8212B3E1100DF29AC /* UIImage+Extension.swift in Sources */,
 				4329E5D2212B396A00DF29AC /* MoodEntry.swift in Sources */,
 				4329E5D6212B3C7A00DF29AC /* UIColor+Extension.swift in Sources */,
 			);
