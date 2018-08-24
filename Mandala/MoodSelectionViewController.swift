@@ -13,6 +13,15 @@ class MoodSelectionViewController: UIViewController {
 	@IBOutlet var stackView: UIStackView!
 	@IBOutlet var addMoodButton: UIButton!
 	
+	@IBAction func addMoodTapped(_ sender: Any) {
+		guard let currentMood = currentMood else {
+			return
+		}
+		
+		let newMoodEntry = MoodEntry(mood: currentMood, timeStamp: Date())
+		moodsConfigurable.add(newMoodEntry)
+	}
+	
 	var moods: [Mood] = [] {
 		didSet {
 			moodButtons = moods.map { mood in
@@ -41,6 +50,21 @@ class MoodSelectionViewController: UIViewController {
 		}
 	}
 	
+	var moodsConfigurable: MoodsConfigurable!
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		switch segue.identifier {
+		case "embedContainerViewController"?:
+			guard let moodsConfigurable = segue.destination as? MoodsConfigurable else {
+				preconditionFailure("Desitination VC does not conform to MoodsConfigurable")
+			}
+			self.moodsConfigurable = moodsConfigurable
+			segue.destination.additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: 160, right: 0)
+		default:
+			preconditionFailure("Unexpexted segue identifier!")
+		}
+	}
+	
 	@objc func moodSelectionChanged(_ sender: UIButton) {
 		guard let selectedIndex = moodButtons.index(of: sender) else {
 			preconditionFailure("Unable to find the tapped button int he buttons array.")
@@ -62,7 +86,6 @@ class MoodSelectionViewController: UIViewController {
 		moods = [.happy, .sad, .angry, .goofy, .crying, .confused, .sleepy, .meh]
 		
 		addMoodButton.layer.cornerRadius = addMoodButton.bounds.height / 2
-		
 	}
 	
 }

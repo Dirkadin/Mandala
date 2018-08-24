@@ -20,7 +20,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13s-FC-L0d">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <connections>
-                                    <segue destination="qmJ-ir-kXo" kind="embed" id="o7b-aw-KLz"/>
+                                    <segue destination="qmJ-ir-kXo" kind="embed" identifier="embedContainerViewController" id="o7b-aw-KLz"/>
                                 </connections>
                             </containerView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9V-Ex-BjP">
@@ -50,6 +50,9 @@
                                 <state key="normal" title="Add Mood">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addMoodTapped:" destination="PzK-z7-xPY" eventType="touchUpInside" id="WcD-aD-FnO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,7 +72,7 @@
                         <viewLayoutGuide key="safeArea" id="LRR-ay-dvg"/>
                     </view>
                     <connections>
-                        <outlet property="addMoodButton" destination="qHQ-D1-m74" id="r7H-2g-Wu4"/>
+                        <outlet property="addMoodButton" destination="qHQ-D1-m74" id="tIs-W7-XQS"/>
                         <outlet property="stackView" destination="GHp-xK-lB4" id="RmU-Xu-jx0"/>
                     </connections>
                 </viewController>
