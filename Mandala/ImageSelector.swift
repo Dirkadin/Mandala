@@ -26,7 +26,7 @@ class ImageSelector: UIControl {
 		stackView.axis = .horizontal
 		stackView.distribution = .fillEqually
 		stackView.alignment = .center
-		stackView.spacing = 12.0
+		stackView.spacing = 10.0
 		stackView.translatesAutoresizingMaskIntoConstraints = false
 		
 		return stackView
